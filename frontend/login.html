@@ -7,13 +7,14 @@
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 
-    <title>献给【这里面写TA的名字】</title>
+    <title>登陆</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">if (window.top !== window.self) { top.location = self.location; }</script>
     <link rel="shortcut icon" href="love.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="128x128" href="love.ico" type="image/png" />
     <link type="text/css" rel="stylesheet" href="css/default.css">
-
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script> -->
     <style>
         .botCenter{width:100%; height:35px; line-height:35px;  position:fixed; bottom:0px; left:0px; font-size:14px; color:#000; text-align:center;}
 		</style>
@@ -24,11 +25,19 @@
 
     哈哈哈
     <script type="text/javascript">
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:8080/love/lilac/login',
+            data: {password:'aa'},
+            success: function (data) {
+                console.log(data);
+            },
+            async: false
+        });
         
-       
     </script>
     
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
     <script type="text/javascript" src="js/jscex.min.js"></script>
     <script type="text/javascript" src="js/jscex-parser.js"></script>
     <script type="text/javascript" src="js/jscex-jit.js"></script>

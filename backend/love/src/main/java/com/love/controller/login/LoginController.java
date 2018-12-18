@@ -12,4 +12,10 @@ public class LoginController {
     public boolean login(@RequestParam(value = "password",required = true) String password) {
         return "aa".equals(password);
     }
+    @PostMapping("/login_test")
+    @ResponseBody
+    public void login_test(@RequestParam(value = "password",required = true) String password) {
+        System.out.println(password);
+    }
+
 }
