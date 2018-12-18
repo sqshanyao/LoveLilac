@@ -1,15 +1,15 @@
 package com.love.controller.login;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/love/lilac")
 public class LoginController {
 
     @PostMapping("/login")
-    public String login() {
-        return "";
+    @ResponseBody
+    public boolean login(@RequestParam(value = "password",required = true) String password) {
+        return "aa".equals(password);
     }
 }

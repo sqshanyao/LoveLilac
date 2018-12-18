@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.love.controller"})
+//@ComponentScan(basePackages = {"com.love.controller"})
 public class WebServletloveConfig extends WebServletConfigBase {
     @Bean(name = "lilacDispatcherServlet")
     public DispatcherServlet getLolacLilac() {
