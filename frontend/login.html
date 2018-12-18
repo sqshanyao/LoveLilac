@@ -30,6 +30,25 @@
             url: 'http://localhost:8080/love/lilac/login',
             data: {password:'aa'},
             success: function (data) {
+							if(false) {
+								if(data == true) {
+										window.location.href = 'https://www.baidu.com/';
+									}
+								}
+                console.log(data);
+            },
+            async: false
+        });
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:8080/love/lilac/login',
+            data: {password:'aa'},
+            success: function (data) {
+							if(false) {
+								if(data == true) {
+										window.location.href = 'https://www.baidu.com/';
+									}
+								}
                 console.log(data);
             },
             async: false
