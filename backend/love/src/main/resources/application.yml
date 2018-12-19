@@ -6,6 +6,9 @@ spring:
         name: test
         url: jdbc:mysql://47.100.211.121:3306/lilac
         username: root
-        password: Sy940801..
-        # 使用druid数据源
-#        driver-class-name: com.mysql.jdbc.Driver
+        password: shanyao
+
+mybatis:
+  mapper-locations: classpath:com/love/mybatis*.xml
+  type-aliases-package: classpath:com/love/domain
+
