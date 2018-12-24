@@ -24,31 +24,22 @@
 <body>
 
     <script type="text/javascript">
+    	var portAdress = "47.100.211.121:520";
+    	var localAdress = "localhost:520";
+    	var urlServer = "http://" + localAdress + "/love/lilac/"; 
+        
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:8080/love/lilac/login',
+            url: urlServer + 'agree',
             data: {password:'aa'},
             success: function (data) {
-							if(false) {
-								if(data == true) {
-										window.location.href = 'https://www.baidu.com/';
-									}
-							}
-							window.location.href = 'test.html';
-                console.log(data);
-            },
-            async: false
-        });
-        $.ajax({
-            type: 'POST',
-            url: 'http://localhost:8080/love/lilac/login',
-            data: {password:'aa'},
-            success: function (data) {
-							if(false) {
-								if(data == true) {
-										window.location.href = 'https://www.baidu.com/';
-									}
-								}
+							if('yes' == data) {
+								window.location.href = 'agree.html';
+							} else if('no' == data) {
+								window.location.href = 'refuse.htmll';
+							}/* else if('no_answer' == data){
+								window.location.href = 'index.html';	
+							}*/
                 console.log(data);
             },
             async: false
@@ -59,7 +50,7 @@
         	
             $.ajax({
             type: 'POST',
-            url: 'http://localhost:8001/love/lilac/login',
+            url: urlServer + '/login',
             data: {password: password.value},
             success: function (data) {
 							if('yes' == data) {
@@ -76,6 +67,18 @@
             },
             async: false
         });
+        }
+        
+        function resoleResult(data) {
+        	if('yes' == data) {
+								window.location.href = 'agree.html';
+							} else if('no' == data) {
+								window.location.href = 'refuse.htmll';
+							} else if('true' == data){
+								window.location.href = 'love.html';	
+							} else {
+								alert("输入错误");
+							}
         }
         
     </script>
